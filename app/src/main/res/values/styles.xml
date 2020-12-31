@@ -1,0 +1,199 @@
+<resources>
+
+    <!-- Loading Screen theme. -->
+    <style name="LoadingTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/loading_background</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- FullScreen theme. -->
+    <style name="FullScreenTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryDark">#000</item>
+        <item name="colorAccent">#FFF</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <!--Aqua Theme-->
+
+    <!-- Base application theme. -->
+    <style name="AquaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/aqua</item>
+        <item name="colorPrimaryDark">@color/aqua</item>
+        <item name="colorAccent">@color/aqua</item>
+        <item name="android:textColor">@color/aqua</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="BlackTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryDark">#000</item>
+        <item name="colorAccent">#000</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="GrayTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/gris</item>
+        <item name="colorPrimaryDark">@color/gris</item>
+        <item name="colorAccent">@color/gris</item>
+        <item name="android:textColor">@color/gris</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryDark">#000</item>
+        <item name="colorAccent">#000</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="SpinnerTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">#FFF</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <style name="RatingStar">
+        <item name="colorPrimary">#daad09</item>
+        <item name="colorPrimaryDark">#daad09</item>
+        <item name="colorAccent">#daad09</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="BottomNavigationTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+    </style>
+
+    <!--Transparent background for AlertDialog-->
+    <style name="TransparentDialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--CalendarView Text Appereance-->
+    <style name="CalendarText" parent="@android:style/Widget.CalendarView">
+        <item name="android:colorPrimary">@color/caldroid_black</item>
+        <item name="android:colorAccent">@color/caldroid_black</item>
+        <item name="android:colorPrimaryDark">@color/caldroid_black</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:weekNumberColor">@color/caldroid_black</item>
+        <item name="android:textSize">@dimen/calendar_font_size</item>
+    </style>
+
+    <!-- Dark theme. -->
+    <style name="CaldroidDefaultDark" parent="CaldroidDefault">
+        <item name="styleCaldroidViewLayout">@style/CaldroidDefaultDarkCalendarViewLayout</item>
+        <item name="styleCaldroidMonthName">@style/CaldroidDefaultDarkMonthName</item>
+        <item name="styleCaldroidNormalCell">@style/CaldroidDefaultDarkCell</item>
+        <item name="styleCaldroidSquareCell">@style/CaldroidDefaultDarkSquareCell</item>
+        <item name="styleCaldroidGridView">@style/CaldroidDefaultDarkGridView</item>
+        <item name="styleCaldroidLeftArrow">@style/CalldroidDefaultLeftArrow</item>
+        <item name="styleCaldroidRightArrow">@style/CalldroidDefaultRightArrow</item>
+        <item name="styleCaldroidWeekdayView">@style/CaldroidDefaultCaldroidWeekdayView</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">@dimen/calendar_font_size</item>
+    </style>
+
+    <style name="CaldroidDefaultDarkCell" parent="CaldroidDefaultCell">
+        <item name="android:background">@drawable/cell_bg</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+    </style>
+
+    <style name="CaldroidDefaultDarkNormalCell" parent="CaldroidDefaultDarkCell">
+        <item name="android:drawable">@color/caldroid_black</item>
+
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+    </style>
+
+    <style name="CaldroidDefaultDarkSquareCell" parent="CaldroidDefaultDarkCell">
+        <!--<item name="android:background">@android:color/white</item>-->
+        <item name="android:drawable">@color/black_overlay</item>
+        <item name="android:state_pressed">false</item>
+        <item name="android:state_first">true</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+    </style>
+
+    <style name="CalldroidDefaultLeftArrow" parent="CaldroidDefaultArrowButton">
+        <item name="android:background">@drawable/ic_chevron_left</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:layout_margin">3dp</item>
+
+    </style>
+
+    <style name="CalldroidDefaultRightArrow" parent="CaldroidDefaultArrowButton">
+        <item name="android:background">@drawable/ic_chevron_right</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_margin">3dp</item>
+
+    </style>
+
+    <style name="CaldroidDefaultDarkCalendarViewLayout">
+        <item name="android:background">@color/grisSusc</item>
+    </style>
+
+    <style name="CaldroidDefaultDarkMonthName" parent="CaldroidDefaultMonthName">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <!--<item name="android:paddingTop">5dp</item>-->
+    </style>
+
+    <style name="CaldroidDefaultCaldroidWeekdayView" parent="CaldroidDefaultWeekday">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@color/caldroid_lighter_gray</item>
+        <item name="android:fontFamily">@font/ralewaymedium</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <style name="customCell">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="DialogCambiarFoto" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+
+    </style>
+
+</resources>

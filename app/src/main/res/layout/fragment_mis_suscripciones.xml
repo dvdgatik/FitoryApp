@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SuscripcionMensual">
+
+    <View
+        android:id="@+id/marginLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        app:layout_constraintStart_toEndOf="@+id/marginLeft"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:overScrollMode="never"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="@dimen/app_toolbar_h"
+                android:layout_width="@dimen/suscripcion_mensual_w"
+                android:layout_height="match_parent"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/suscripcion_titulo"
+                    android:text="MIS SUSCRIPCIONES"
+                    android:textSize="@dimen/app_titles_ts"
+                    android:fontFamily="@font/ralewaybold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/rv_mis_suscripciones_mes"
+                    android:layout_below="@id/suscripcion_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_mis_suscripciones_gratis"
+                    android:layout_below="@id/rv_mis_suscripciones_mes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_mis_suscripciones"
+                    android:layout_below="@id/rv_mis_suscripciones_gratis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</android.support.constraint.ConstraintLayout>

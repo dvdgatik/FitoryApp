@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SuscripcionMensualDetalle">
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/app_toolbar_h"
+            android:layout_width="@dimen/suscripcion_diaria_detalle_w"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/suscripcion_titulo"
+                android:text="SUSCRIPCIÓN"
+                android:textSize="22sp"
+                android:fontFamily="@font/ralewaybold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/plan_mensual"
+                android:layout_marginTop="@dimen/suscripcion_detalle_mt"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/suscripcion_titulo"
+                android:text="PLAN CONTRATADO"
+                android:textSize="@dimen/font_size"
+                android:fontFamily="@font/ralewaysemibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_suscripcion_tipo"
+                android:text="Básico"
+                android:fontFamily="@font/ralewaysemibold"
+                android:paddingLeft="@dimen/suscripcion_detalle_padding"
+                android:layout_below="@+id/plan_mensual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_suscripcion_sesiones"
+                android:text="4 sesiones"
+                android:textColor="@color/grisSusc"
+                android:paddingLeft="@dimen/suscripcion_detalle_padding"
+                android:layout_below="@id/tv_suscripcion_tipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_suscripcion_precio"
+                android:text="$132.00 MXN"
+                android:textColor="@color/grisSusc"
+                android:paddingRight="@dimen/suscripcion_detalle_padding"
+                android:layout_below="@+id/plan_mensual"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_suscripcion_sesiones_restantes"
+                android:text="Sesiones restantes: 2"
+                android:textColor="@color/grisSusc"
+                android:paddingRight="20dp"
+                android:layout_below="@+id/tv_suscripcion_precio"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/plan_mensual_texto"
+                android:text="@string/suscripcion_diaria"
+                android:textColor="@color/grisSusc"
+                android:layout_below="@+id/tv_suscripcion_sesiones_restantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/usuario"-->
+                <!--android:layout_below="@+id/plan_mensual_texto"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_marginTop="25dp"-->
+                    <!--android:id="@+id/nombre"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/nombre_lbl"-->
+                        <!--android:text="Nombre:"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:fontFamily="@font/ralewaysemibold"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_nombre"-->
+                        <!--android:text="Mariana García"-->
+                        <!--android:fontFamily="@font/ralewaymedium"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+
+                    <!--android:id="@+id/club"-->
+                    <!--android:layout_below="@+id/nombre"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/club_nombre_lbl"-->
+                        <!--android:text="Club:"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:fontFamily="@font/ralewaysemibold"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_nombreclub"-->
+                        <!--android:text="TRX CENTRO"-->
+                        <!--android:fontFamily="@font/ralewaymedium"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</LinearLayout>-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/inicio"-->
+                    <!--android:layout_below="@+id/club"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/inicio_lbl"-->
+                        <!--android:text="Inicio:"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:fontFamily="@font/ralewaysemibold"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_inicio"-->
+                        <!--android:text="dd/mm/aa"-->
+                        <!--android:fontFamily="@font/ralewaymedium"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/duracion"-->
+                    <!--android:layout_below="@+id/inicio"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/duracion_lbl"-->
+                        <!--android:text="Duración:"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:fontFamily="@font/ralewaysemibold"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_duracion"-->
+                        <!--android:text="1 mes"-->
+                        <!--android:fontFamily="@font/ralewaymedium"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+
+
+            <View
+                android:id="@+id/section"
+                android:visibility="invisible"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/plan_mensual_texto"
+                android:background="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"></View>
+
+            <RelativeLayout
+                android:id="@+id/informacion_club"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/section"
+                android:paddingLeft="50dp"
+                android:paddingRight="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/informacion_club_titulo"
+                    android:text="INFORMACIÓN CLUB"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/ralewaysemibold"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/direccion"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/informacion_club_titulo"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/direccion_lbl"
+                        android:text="Dirección:"
+                        android:textSize="@dimen/font_size"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/ralewaysemibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_direccion"
+                        android:text="Miguel Hidalgo #512 Zona Centro Monterrey, N.L."
+                        android:textSize="@dimen/font_size"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/telefono"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_below="@+id/direccion"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/telefono_lbl"
+                        android:text="Teléfono:"
+                        android:textSize="@dimen/font_size"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/ralewaysemibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_telefono"
+                        android:text="01 (812) 132 2896"
+                        android:textSize="@dimen/font_size"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/correo"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/telefono"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/correo_lbl"
+                        android:text="Correo:"
+                        android:textSize="@dimen/font_size"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/ralewaysemibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_correo"
+                        android:text="atencionalcliente@trx.com"
+                        android:textSize="@dimen/font_size"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/como_llegar"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/informacion_club"
+                android:text="@string/como_llegar"
+                android:textSize="@dimen/font_size"
+                android:fontFamily="@font/ralewaysemibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_renovar_suscripcion"
+                android:background="@drawable/circle_button"
+                android:fontFamily="@font/ralewaymedium"
+                android:textSize="10sp"
+                android:textColor="@android:color/white"
+                android:text="CANCELAR SUSCRIPCIÓN"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/como_llegar"
+                android:layout_width="150dp"
+                android:layout_height="30dp" />
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_cancelar_suscripcion"-->
+                <!--android:background="@drawable/circle_button"-->
+                <!--android:fontFamily="@font/ralewaymedium"-->
+                <!--android:textSize="10sp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:text="CANCELAR SUSCRIPCIÓN"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_below="@+id/btn_renovar_suscripcion"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="30dp" />-->
+
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:background="@color/aqua"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:src="@drawable/logo_grafico"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="120dp" />-->
+
+        <!--</LinearLayout>-->
+
+    </ScrollView>
+
+</RelativeLayout>

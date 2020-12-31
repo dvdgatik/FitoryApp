@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Perfil">
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/app_toolbar_h"
+            android:layout_width="@dimen/informacion_w"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/perfil"
+
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_informacion_foto_h">
+
+                <TextView
+                    android:text="MI PERFIL"
+                    android:fontFamily="@font/ralewaybold"
+                    android:textSize="@dimen/app_titles_ts"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <!--<ImageView-->
+                        <!--android:background="@color/gris"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:scaleType="fitCenter" />-->
+                    <ImageView
+                        android:id="@+id/imagen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cambiar_foto"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/perfil"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/icono_cambiar_foto"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="@dimen/fragment_informacion_camara_w"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:text="Cambiar Foto"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/informacion_perfil"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/cambiar_foto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Nombre"
+                    android:textSize="@dimen/font_size"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="0px"
+                    android:layout_height="0px"/>
+
+                <EditText
+                    android:id="@+id/et_cliente_nombre"
+                    android:textColor="@android:color/darker_gray"
+                    android:background="@drawable/edittext_border_gray"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="@dimen/informacion_edit_text_mb"
+                    android:theme="@style/BlackTheme"
+                    android:inputType="text"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/informacion_edit_text_h" />
+
+                <TextView
+                    android:text="Apellido"
+                    android:textSize="@dimen/font_size"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/et_cliente_apellido"
+                    android:textColor="@android:color/darker_gray"
+                    android:background="@drawable/edittext_border_gray"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="@dimen/informacion_edit_text_mb"
+                    android:theme="@style/BlackTheme"
+                    android:inputType="text"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/informacion_edit_text_h" />
+
+                <TextView
+                    android:text="Teléfono"
+                    android:textSize="@dimen/font_size"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/et_cliente_telefono"
+                    android:enabled="false"
+                    android:textColor="@android:color/darker_gray"
+                    android:background="@drawable/edittext_border_gray"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="@dimen/informacion_edit_text_mb"
+                    android:theme="@style/BlackTheme"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/informacion_edit_text_h" />
+
+                <TextView
+                    android:text="Correo Electrónico"
+                    android:textSize="@dimen/font_size"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/et_cliente_correo_electronico"
+                    android:enabled="false"
+                    android:background="@drawable/edittext_border_gray"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="@dimen/informacion_edit_text_mb"
+                    android:theme="@style/BlackTheme"
+                    android:textColor="@android:color/darker_gray"
+                    android:inputType="text"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/informacion_edit_text_h" />
+
+                <TextView
+                    android:text="Contraseña"
+                    android:textSize="@dimen/font_size"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/et_cliente_contrasena"
+                    android:background="@drawable/edittext_border_gray"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="@dimen/informacion_edit_text_mb"
+                    android:textColor="@android:color/darker_gray"
+                    android:inputType="textPassword"
+                    android:theme="@style/BlackTheme"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/informacion_edit_text_h" />
+
+                <TextView
+                    android:id="@+id/seleccionar_tarjeta"
+                    android:layout_below="@+id/line2"
+                    android:textSize="@dimen/font_size"
+                    android:text="Objetivo"
+                    android:fontFamily="@font/ralewaysemibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/tarjeta_spinner"
+                    android:layout_below="@+id/seleccionar_tarjeta"
+                    android:background="@drawable/edittext_border_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/informacion_edit_text_h">
+
+                    <Spinner
+                        android:id="@+id/sp_objetivos"
+                        android:textColor="@android:color/darker_gray"
+                        android:theme="@style/BlackTheme"
+                        android:inputType="text"
+                        android:textSize="@dimen/font_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/informacion_edit_text_h"
+                        android:backgroundTint="@android:color/darker_gray"
+                        ></Spinner>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/botones"
+                android:layout_below="@+id/informacion_perfil"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/boton_guardar_cambios"
+                    android:background="@drawable/circle_button"
+                    android:textSize="@dimen/font_size"
+                    android:textColor="@android:color/white"
+                    android:text="GUARDAR CAMBIOS"
+                    android:layout_marginRight="4dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/buttons_height" />
+                <Button
+                    android:id="@+id/boton_cerrar_sesion"
+                    android:background="@drawable/circle_button"
+                    android:textSize="@dimen/font_size"
+                    android:textColor="@android:color/white"
+                    android:text="CERRAR SESIÓN"
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/buttons_height" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/boton_cambiar_ubicacion"
+                android:background="@drawable/circle_button_white"
+                android:textSize="@dimen/font_size"
+                android:text="Cambiar ubicación"
+                android:layout_marginTop="@dimen/informacion_button_mt"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/botones"
+                android:layout_width="@dimen/informacion_button_w"
+                android:layout_height="@dimen/buttons_height" />
+
+
+            <TextView
+                android:id="@+id/terminos"
+                android:layout_below="@+id/boton_cambiar_ubicacion"
+                android:letterSpacing="0.1"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/informacion_button_mt"
+                android:fontFamily="@font/ralewaysemibold"
+                android:text="@string/terminos_pt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--<Button-->
+                <!--android:id="@+id/boton_mis_tarjetas"-->
+                <!--android:visibility="gone"-->
+                <!--android:background="@drawable/circle_button_white"-->
+                <!--android:textSize="@dimen/font_size"-->
+                <!--android:text="MIS TARJETAS"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_below="@+id/boton_guardar_cambios"-->
+                <!--android:layout_width="@dimen/informacion_button_w"-->
+                <!--android:layout_height="@dimen/buttons_height" />-->
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

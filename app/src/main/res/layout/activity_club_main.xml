@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ClubMain">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_toolbar_h">
+
+            <ImageView
+                android:id="@+id/button_atras"
+                android:visibility="gone"
+                android:onClick="atras"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/toolbar_boton_regresar" />
+
+            <ImageView
+                android:onClick="testing"
+                android:src="@drawable/logo_fitory_bco"
+                android:layout_centerInParent="true"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/cerrar_sesion"
+                android:visibility="gone"
+                android:onClick="cerrarSesion"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/boton_cerrar_sesion"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/app_logout_h" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_navigation" />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_toolbar_h"
+            android:layout_alignParentBottom="true"
+            android:theme="@style/BottomNavigationTheme"
+            app:itemBackground="@android:color/black"
+            app:itemIconTint="@android:color/white"
+            app:itemTextColor="@android:color/white"
+            app:menu="@menu/bottom_menu" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_view"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Clubes">
+
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/layout_buscador"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:padding="@dimen/fragment_lupa_padding"
+            android:layout_marginLeft="@dimen/fragment_clubes_buscador_margins"
+            android:src="@drawable/ic_search"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/fragment_clubes_lupa_w"
+            android:layout_height="@dimen/fragment_clubes_lupa_h" />
+
+        <EditText
+            android:id="@+id/et_busqueda_usuario"
+            android:inputType="text"
+            android:background="@drawable/circle_button_border"
+            android:paddingLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_clubes_buscador_h" />
+
+        <ImageView
+            android:id="@+id/iv_buscador_cancel"
+            android:layout_marginRight="@dimen/fragment_clubes_buscador_margins"
+            android:src="@drawable/ic_cancel"
+            android:scaleType="fitXY"
+            android:padding="@dimen/fragment_lupa_padding"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/fragment_clubes_lupa_w"
+            android:layout_height="@dimen/fragment_clubes_lupa_h" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <!--<ScrollView-->
+        <!--android:overScrollMode="never"-->
+        <!--android:paddingTop="20dp"-->
+        <!--android:paddingLeft="20dp"-->
+        <!--android:paddingRight="20dp"-->
+        <!--android:layout_toRightOf="@+id/marginLeft"-->
+        <!--android:layout_below="@+id/title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+
+
+
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:overScrollMode="never"-->
+                <!--android:id="@+id/rv_clubes"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+            <!--<RelativeLayout-->
+                <!--android:clickable="true"-->
+                <!--android:foreground="?android:attr/selectableItemBackground"-->
+                <!--android:id="@+id/club"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="210dp">-->
+
+                <!--<ImageView-->
+                    <!--android:background="@color/gris"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="150dp" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:id="@+id/icono_compartir"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_above="@+id/club_nombre"-->
+                    <!--android:src="@drawable/icono_compartir_inactivo"-->
+                    <!--android:layout_width="40dp"-->
+                    <!--android:layout_height="40dp" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_above="@+id/club_nombre"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:layout_toLeftOf="@+id/icono_compartir"-->
+                    <!--android:src="@drawable/icono_favoritos_inactivo"-->
+                    <!--android:layout_width="40dp"-->
+                    <!--android:layout_height="40dp" />-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_above="@+id/club_direccion"-->
+                    <!--android:id="@+id/club_nombre"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="20dp">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_nombre_club"-->
+                        <!--android:fontFamily="@font/ralewaybold"-->
+                        <!--android:text="TRX CENTRO - TRX"-->
+                        <!--android:textSize="14sp"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="2"/>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1">-->
+                        <!--<RatingBar-->
+                            <!--android:layout_gravity="right"-->
+                            <!--style="?android:ratingBarStyleSmall"-->
+                            <!--android:theme="@style/RatingStar"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:rating="3"-->
+                            <!--android:layout_height="wrap_content" />-->
+                    <!--</LinearLayout>-->
+
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:id="@+id/club_direccion"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_direccion_club"-->
+                        <!--android:fontFamily="@font/ralewaymedium"-->
+                        <!--android:text="Hidalgo #512, Zona Centro. Monterrey, N.L."-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="2"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_distancia_club"-->
+                        <!--android:gravity="right|center_vertical"-->
+                        <!--android:fontFamily="@font/ralewaymedium"-->
+                        <!--android:text="1.5KM"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1"/>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/rl_clubs"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+        <LinearLayout
+            android:id="@+id/view_empty"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/marginLeft"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_below="@+id/title"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="No se encontraron sucursales. Puede volver a cargar los resultados deslizando hacia abajo."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@drawable/ic_arrow_downward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_sucursales"
+            android:layout_below="@id/layout_buscador"
+            android:layout_toRightOf="@id/marginLeft"
+            android:layout_marginTop="10dp"
+            android:paddingTop="@dimen/club_main_recycler_mt"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:id="@+id/tv_sin_sucursales"
+            android:visibility="invisible"
+            android:text="No se encontraron resultados"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/marginLeft"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+            <!--<com.malinskiy.superrecyclerview.SuperRecyclerView-->
+                <!--android:id="@+id/rv_sucursales"-->
+                <!--android:overScrollMode="never"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+            <!--</com.malinskiy.superrecyclerview.SuperRecyclerView>-->
+
+
+    <!--</ScrollView>-->
+    <TextView
+        android:id="@+id/tv_clubes_title"
+        android:text="CLUBES"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/layout_buscador"
+        android:layout_toRightOf="@id/marginLeft"
+        android:textColor="@android:color/black"
+        android:textSize="22dp"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

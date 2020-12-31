@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Calendario">
+
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/app_toolbar_h"
+            android:layout_width="@dimen/calendario_w"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/calendario_titulo"
+                android:text="CALENDARIO"
+                android:fontFamily="@font/ralewaybold"
+                android:textSize="@dimen/app_titles_ts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--<com.prolificinteractive.materialcalendarview.MaterialCalendarView-->
+                <!--android:id="@+id/calendar"-->
+                <!--android:layout_marginTop="60dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:mcv_headerTextAppearance="@style/CalendarHeaderText"-->
+                <!--app:mcv_selectionColor="@android:color/transparent"-->
+                <!--&gt;</com.prolificinteractive.materialcalendarview.MaterialCalendarView>-->
+
+            <!--<CalendarView-->
+                <!--android:id="@+id/calendar"-->
+                <!--android:layout_marginTop="60dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--&gt;</CalendarView>-->
+
+
+
+
+            <LinearLayout
+                android:theme="@style/CaldroidDefaultDark"
+                android:id="@+id/calendar"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/calendario_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <!--<com.prolificinteractive.materialcalendarview.MaterialCalendarView-->
+                <!--android:id="@+id/calendar"-->
+                <!--app:mcv_headerTextAppearance="@style/CustomTextAppearance"-->
+                <!--app:mcv_weekDayTextAppearance="@style/CustomTextAppearance"-->
+                <!--android:layout_marginTop="60dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"></com.prolificinteractive.materialcalendarview.MaterialCalendarView>-->
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/calendario_texto"
+                android:text="@string/calendario"
+                android:layout_marginTop="30dp"
+                android:textSize="@dimen/font_size"
+                android:layout_below="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/calendario_texto"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/dias_asistidos"
+                        android:text="Días asistidos"
+                        android:textSize="@dimen/font_size"
+                        android:gravity="center|center_vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:layout_toLeftOf="@+id/dias_asistidos"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/punto_rojo"
+                        android:scaleType="fitXY"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp" />
+
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:layout_height="20dp">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/dias_noasistidos"-->
+                        <!--android:text="Días no asistidos"-->
+                        <!--android:textSize="10sp"-->
+                        <!--android:gravity="center|center_vertical"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_toLeftOf="@+id/dias_noasistidos"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:src="@mipmap/punto_gris"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:layout_width="7dp"-->
+                        <!--android:layout_height="7dp" />-->
+                <!--</RelativeLayout>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

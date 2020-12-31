@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginBottom="20dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="25dp">
+
+    <Button
+        android:id="@+id/ciudad"
+        android:fontFamily="@font/ralewaymedium"
+        android:textAllCaps="false"
+        android:textColor="@drawable/custom_button_text"
+        android:background="@drawable/custom_button"
+        android:layout_width="@dimen/item_ciudad_bco"
+        android:layout_height="25dp" />
+
+</RelativeLayout>

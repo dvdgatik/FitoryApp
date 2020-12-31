@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".fragments.Perfil">
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/app_toolbar_h"
+            android:layout_width="@dimen/informacion_w"
+            android:layout_height="match_parent"
+            >
+
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:text="MIS TARJETAS"
+                    android:fontFamily="@font/ralewaybold"
+                    android:textSize="@dimen/app_titles_ts"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_tarjetas"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_marginTop="@dimen/fragment_mis_tarjetas_recycler_mt"
+                android:layout_marginBottom="@dimen/fragment_mis_tarjetas_recycler_mb"
+                android:background="@android:color/black"
+                android:layout_below="@id/plan_mensual_texto"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <TextView
+
+                android:id="@+id/agregar_tarjeta_title"
+                android:text="AGREGAR TARJETA"
+                android:textSize="@dimen/font_size"
+                android:fontFamily="@font/ralewaysemibold"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/pagar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                />
+
+            <RelativeLayout
+                android:id="@+id/agregar_tarjeta_componentes"
+                android:layout_below="@id/agregar_tarjeta_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="0px"
+                    android:layout_height="0px"/>
+
+                <RelativeLayout
+                    android:id="@+id/numero_tarjeta"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="@dimen/fragment_mis_tarjetas_et_mb"
+                    android:background="@drawable/edittext_border_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <EditText
+                        android:id="@+id/et_numero_tarjeta"
+                        android:theme="@style/BlackTheme"
+                        android:background="@android:color/transparent"
+                        android:paddingLeft="5dp"
+                        android:hint="Número de Tarjeta"
+                        android:textSize="@dimen/font_size"
+                        android:maxLength="16"
+                        android:inputType="number"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/vencimiento"
+                    android:layout_below="@id/numero_tarjeta"
+                    android:layout_marginBottom="@dimen/fragment_mis_tarjetas_et_mb"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/vencimiento_month"
+                        android:layout_below="@+id/numero_tarjeta"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/edittext_border_gray"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1">
+                        <EditText
+                            android:id="@+id/et_tarjeta_mes"
+                            android:theme="@style/BlackTheme"
+                            android:hint="Vencimiento (MM)"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/ralewaymedium"
+                            android:textSize="@dimen/font_size"
+                            android:maxLength="2"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/vencimiento_year"
+                        android:layout_below="@id/numero_tarjeta"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/edittext_border_gray"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1">
+                        <EditText
+                            android:id="@+id/et_tarjeta_vencimiento"
+                            android:theme="@style/BlackTheme"
+                            android:hint="Vencimiento (AAAA)"
+                            android:paddingLeft="5dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/ralewaymedium"
+                            android:textSize="@dimen/font_size"
+                            android:maxLength="4"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/vencimiento"
+                    android:background="@drawable/edittext_border_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    >
+                    <EditText
+                        android:id="@+id/et_tarjeta_cvv"
+                        android:hint="Código de Seguridad"
+                        android:paddingLeft="5dp"
+                        android:maxLength="4"
+                        android:theme="@style/BlackTheme"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textSize="@dimen/font_size"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_agregar_tarjeta"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/circle_button"
+                android:fontFamily="@font/ralewaymedium"
+                android:textColor="@android:color/white"
+                android:text="AGREGAR"
+                android:textSize="@dimen/item_suscripcion_mensual_ts"
+                android:layout_marginTop="@dimen/fragment_mis_tarjetas_button_mt"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/agregar_tarjeta_componentes"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/buttons_height" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

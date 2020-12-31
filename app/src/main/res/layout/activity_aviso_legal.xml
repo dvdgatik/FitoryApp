@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AvisoLegal">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_toolbar_h">
+
+        <ImageView
+            android:onClick="atras"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/toolbar_boton_regresar" />
+
+        <ImageView
+            android:src="@drawable/logo_fitory_bco"
+            android:layout_centerInParent="true"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/aviso_legal_w"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".activities.AvisoLegal">
+
+                <TextView
+                    android:layout_marginBottom="20dp"
+                    android:text="AVISO LEGAL"
+                    android:fontFamily="@font/ralewaybold"
+                    android:textSize="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="TÉRMINOS Y CONDICIONES"
+                    android:fontFamily="@font/ralewaysemibold"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:text="1. Uso del servicio"
+                    android:fontFamily="@font/ralewaysemibold"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_marginBottom="10dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium elementum finibus. Phasellus at sem in tellus aliquet tincidunt. Ut ac dui eros. Nulla quis euismod risus, eu consequat velit. Nam non faucibus quam, nec mollis ipsum. Pellentesque purus urna, blandit at commodo non, sollicitudin."
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></View>
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:text="2. Propiedades de Fitory"
+                    android:fontFamily="@font/ralewaysemibold"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_marginBottom="10dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium elementum finibus. Phasellus at sem in tellus aliquet tincidunt. Ut ac dui eros. Nulla quis euismod risus, eu consequat velit. Nam non faucibus quam, nec mollis ipsum. Pellentesque purus urna, blandit at commodo non, sollicitudin."
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></View>
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:text="3. Aviso de Privacidad"
+                    android:fontFamily="@font/ralewaysemibold"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium elementum finibus. Phasellus at sem in tellus aliquet tincidunt. Ut ac dui eros. Nulla quis euismod risus, eu consequat velit. Nam non faucibus quam, nec mollis ipsum. Pellentesque purus urna, blandit at commodo non, sollicitudin."
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></View>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/grisSusc"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Intro$PlaceholderFragment">
+
+    <ImageView
+        android:id="@+id/section_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/section_fitory_logo"
+        android:src="@drawable/logo_fitory_bco"
+        android:layout_marginTop="@dimen/fitory_logo1_mt"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/fitory_logo1_ancho"
+        android:layout_height="@dimen/fitory_logo1_alto" />
+
+    <TextView
+        android:layout_marginTop="@dimen/intro_titulo_mt"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/section_fitory_logo"
+        android:fontFamily="@font/ralewaymedium"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/intro_titulo_ts"
+        android:text="Encuentra un club con tu actividad favorita"
+        android:letterSpacing="0.1"
+        android:gravity="center_horizontal"
+        android:id="@+id/section_text"
+        android:layout_width="match_parent"
+        android:layout_height="55dp" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/section_desplazar_invisible"
+        android:fontFamily="@font/ralewaymedium"
+        android:textColor="@android:color/white"
+        android:letterSpacing="0.1"
+        android:gravity="center_horizontal"
+        android:id="@+id/section_sub_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

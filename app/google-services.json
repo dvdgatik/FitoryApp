@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "129912601001",
+    "firebase_url": "https://fitorynotificaciones.firebaseio.com",
+    "project_id": "fitorynotificaciones",
+    "storage_bucket": "fitorynotificaciones.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129912601001:android:dba7b51da06fa13b",
+        "android_client_info": {
+          "package_name": "com.dimakers.fitoryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129912601001-62hle4ai0dji5ctgbolpeeeu19ifqp9e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dimakers.fitoryapp",
+            "certificate_hash": "51c4737d8610b25a83bb4112476409a3e399346a"
+          }
+        },
+        {
+          "client_id": "129912601001-kcjdkkjos6rd9hdr62oqvuhmg4ebdj26.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dimakers.fitoryapp",
+            "certificate_hash": "a8efb0e275ea56b821f1c713159a167b96d89421"
+          }
+        },
+        {
+          "client_id": "129912601001-ts3tf8a420jpg9qjtv1mel941im65ld4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzOTbVoMD-19A5W22gqmC2UsESbbqbrow"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129912601001-ts3tf8a420jpg9qjtv1mel941im65ld4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

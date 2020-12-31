@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/natacion"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:layout_below="@id/actividades_incluidas_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/desplegar_informacion"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+
+        <ImageView
+            android:id="@+id/iv_horario_icono"
+            android:src="@drawable/icono_natacion"
+            android:layout_centerVertical="true"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+        <TextView
+            android:id="@+id/tv_horario_nombre"
+            android:text="Natación"
+            android:layout_toRightOf="@+id/iv_horario_icono"
+            android:textSize="13dp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/ralewaysemibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_desplegar_informacion"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_horario_nombre"
+            android:src="@drawable/flechita"
+            android:layout_width="5dp"
+            android:layout_height="5dp" />
+    </RelativeLayout>
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_club_correo"
+        app:ael_expanded="false"
+        app:ael_duration="500"
+        app:ael_interpolator="accelerateDecelerate"
+        app:ael_orientation="vertical">
+
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+    </LinearLayout>

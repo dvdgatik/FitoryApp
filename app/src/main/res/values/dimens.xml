@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="app_toolbar_h">56dp</dimen>
+    <dimen name="toolbar_logo_w">120dp</dimen>
+    <dimen name="toolbar_boton_regresar">25dp</dimen>
+    <dimen name="app_tabitem_h">56dp</dimen>
+
+    <!--Sign Up Activity-->
+    <dimen name="sign_up_et_w">300dp</dimen>
+    <dimen name="sign_up_firstet_mt">30dp</dimen>
+    <dimen name="sign_up_et_mt">10dp</dimen>
+    <dimen name="sign_up_checkbox_w">200dp</dimen>
+    <dimen name="sign_up_btn_w">200dp</dimen>
+    <dimen name="sign_up_btn_h">50dp</dimen>
+    <dimen name="sign_up_btn_mt">10dp</dimen>
+    <dimen name="sign_up_terminos_tv_mt">10dp</dimen>
+    <dimen name="sign_up_checkbox_h">90dp</dimen>
+    <dimen name="sign_up_edit_text_mt">25dp</dimen>
+
+
+    <!--Main Activity-->
+    <dimen name="logo_carga_w">200dp</dimen>
+    <dimen name="logo_carga_h">200dp</dimen>
+    <dimen name="app_gray_ml_w">30dp</dimen>
+
+    <!--Seleccionar Ciudad Activity-->
+    <dimen name="ciudad_titulo_ml">20dp</dimen>
+    <dimen name="ciudad_titulo_mt">60dp</dimen>
+    <dimen name="ciudad_titulo_textsize">22dp</dimen>
+    <dimen name="ciudad_subtitulo_ml">20dp</dimen>
+    <dimen name="ciudad_subtitulo_textsize">10dp</dimen>
+    <dimen name="ciudad_pais_mt">35dp</dimen>
+    <dimen name="ciudad_pais_w">250dp</dimen>
+    <dimen name="ciudad_recycler_mt">50dp</dimen>
+    <dimen name="ciudad_recycler_ml">20dp</dimen>
+    <dimen name="ciudad_recycler_mr">20dp</dimen>
+    <dimen name="ciudad_button_mt">20dp</dimen>
+    <dimen name="ciudad_boton_mb">15dp</dimen>
+    <dimen name="ciudad_boton_w">200dp</dimen>
+    <dimen name="ciudad_boton_h">30dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="omitir_margin">30dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+    <!--Registrarme Activity-->
+    <dimen name="boton_registro_fb_w">250dp</dimen>
+    <dimen name="boton_registro_fb_h">35dp</dimen>
+    <dimen name="boton_registro_fb_mt">120dp</dimen>
+    <dimen name="seleccion_boton_registro_mt">15dp</dimen>
+    <dimen name="seleccion_terminos_mt">40dp</dimen>
+    <dimen name="seleccion_terminos_mb">20dp</dimen>
+
+    <!--Dimens-->
+    <dimen name="buttons_height">28dp</dimen>
+    <dimen name="fitory_logo1_ancho">270dp</dimen>
+    <dimen name="fitory_logo1_alto">130dp</dimen>
+    <dimen name="fitory_logo1_mt">170dp</dimen>
+    <dimen name="fitory_logo2_mt">30dp</dimen>
+    <dimen name="fitory_logo2_ancho">240dp</dimen>
+    <dimen name="fitory_logo2_alto">45dp</dimen>
+    <dimen name="font_size">12dp</dimen>
+
+    <!--Intro-->
+    <dimen name="intro_titulo_mt">70dp</dimen>
+    <dimen name="intro_titulo_ts">20dp</dimen>
+    <dimen name="intro_flecha_altura">28dp</dimen>
+
+    <!--Login-->
+    <dimen name="login_flecha_mt">40dp</dimen>
+    <dimen name="login_flecha_ancho">60dp</dimen>
+    <dimen name="login_flecha_alto">40dp</dimen>
+    <dimen name="login_facebook_btn_mt">40dp</dimen>
+
+    <!--Login Activity-->
+    <dimen name="login_logo_mt">20dp</dimen>
+    <dimen name="login_logo_w">300dp</dimen>
+    <dimen name="login_logo_h">60dp</dimen>
+    <dimen name="login_edittext_w">300dp</dimen>
+    <dimen name="login_first_edittext_mt">30dp</dimen>
+    <dimen name="login_edittext_mt">10dp</dimen>
+    <dimen name="login_width">300dp</dimen>
+    <dimen name="login_contrasena_tv_mt">10dp</dimen>
+    <dimen name="login_sesion_btn_mt">20dp</dimen>
+    <dimen name="login_google_btn_mt">10dp</dimen>
+    <dimen name="login_crearcuenta_tv_mt">15dp</dimen>
+    <dimen name="login_sesion_btn_w">200dp</dimen>
+    <dimen name="login_sesion_btn_h">40dp</dimen>
+    <dimen name="login_media_btn_w">250dp</dimen>
+    <dimen name="login_media_btn_h">40dp</dimen>
+    <dimen name="intro_flecha_mt">200dp</dimen>
+    <dimen name="buscar_edittext_ml">20dp</dimen>
+    <dimen name="buscar_edittext_mr">20dp</dimen>
+    <dimen name="buscar_content_w">280dp</dimen>
+    <dimen name="login_btn_session">150dp</dimen>
+
+    <!--Aviso Legal-->
+    <dimen name="aviso_legal_w">280dp</dimen>
+
+    <!--Club Detalle-->
+    <dimen name="club_detalle_w">310dp</dimen>
+    <dimen name="item_ciudad_bco">120dp</dimen>
+    <dimen name="item_ciudad_aqua">120dp</dimen>
+    <dimen name="club_detalle_mas_informacion">200dp</dimen>
+    <dimen name="favoritos_w">280dp</dimen>
+    <dimen name="notificaciones_w">280dp</dimen>
+    <dimen name="suscripcion_diaria_w">280dp</dimen>
+    <dimen name="suscripcion_mensual_w">280dp</dimen>
+    <dimen name="suscripcion_diaria_detalle_w">280dp</dimen>
+    <dimen name="suscripcion_mensual_detalle">280dp</dimen>
+    <dimen name="informacion_w">280dp</dimen>
+    <dimen name="calendario_w">280dp</dimen>
+    <dimen name="seleccion_registrar_logo_w">250dp</dimen>
+    <dimen name="seleccion_registrar_logo_h">70dp</dimen>
+    <dimen name="login_btn_session_mt">30dp</dimen>
+    <dimen name="sign_up_logo_w">240dp</dimen>
+    <dimen name="sign_up_logo_h">45dp</dimen>
+    <dimen name="sign_up_logo_mb">1dp</dimen>
+    <dimen name="informacion_edit_text_h">20dp</dimen>
+    <dimen name="informacion_edit_text_mb">10dp</dimen>
+    <dimen name="informacion_button_w">150dp</dimen>
+    <dimen name="sign_up_flecha_w">30dp</dimen>
+    <dimen name="sign_up_flecha_h">20dp</dimen>
+    <dimen name="intro_subtitulo_mt">20dp</dimen>
+    <dimen name="intro_titulo_h">55dp</dimen>
+    <dimen name="sign_up_terminos_mt">40dp</dimen>
+    <dimen name="invisible_et_mt">40dp</dimen>
+    <dimen name="app_logout_h">22dp</dimen>
+
+    <dimen name="club_stars_w">20dp</dimen>
+    <dimen name="club_main_recycler_mt">20dp</dimen>
+    <dimen name="item_club_h">275dp</dimen>
+    <dimen name="item_club_pd">15dp</dimen>
+    <dimen name="app_titles_ts">24dp</dimen>
+    <dimen name="fragment_informacion_foto_h">100dp</dimen>
+    <dimen name="fragment_informacion_cambiar_foto">13dp</dimen>
+    <dimen name="fragment_clubes_lupa_w">30dp</dimen>
+    <dimen name="fragment_clubes_lupa_h">30dp</dimen>
+    <dimen name="fragment_clubes_buscador_h">30dp</dimen>
+    <dimen name="fragment_lupa_padding">3dp</dimen>
+    <dimen name="fragment_mis_tarjetas_recycler_mt">40dp</dimen>
+    <dimen name="fragment_mis_tarjetas_recycler_mb">40dp</dimen>
+    <dimen name="item_tarjeta_mt">15dp</dimen>
+    <dimen name="app_buttons_ts">12dp</dimen>
+    <dimen name="fragment_mis_tarjetas_et_mb">15dp</dimen>
+    <dimen name="fragment_mis_tarjetas_button_mt">20dp</dimen>
+    <dimen name="informacion_button_mt">20dp</dimen>
+    <dimen name="item_club_wh">40dp</dimen>
+    <dimen name="item_club_section_mt">15dp</dimen>
+    <dimen name="item_club_image_container_h">150dp</dimen>
+    <dimen name="calendar_font_size">14dp</dimen>
+    <dimen name="beacon_logo_wh">250dp</dimen>
+    <dimen name="item_servicio_ts">13dp</dimen>
+    <dimen name="item_club_title">16dp</dimen>
+    <dimen name="item_club_direccion_mt">10dp</dimen>
+    <dimen name="item_club_subtitle_ts">14dp</dimen>
+    <dimen name="fragment_clubes_buscador_margins">3dp</dimen>
+    <dimen name="fragment_evaluar_tv_mt">60dp</dimen>
+    <dimen name="fragment_club_detalle_precio_ts">16dp</dimen>
+    <dimen name="fragment_club_detalle_viewpager_h">200dp</dimen>
+    <dimen name="fragment_subscripciones_descripcion_mb">40dp</dimen>
+    <dimen name="fragment_club_detalle_nombre">22dp</dimen>
+    <dimen name="fragment_suscripcion_diaria_detalle_pl">40dp</dimen>
+    <dimen name="fragment_suscripcion_diaria_detalle_pr">40dp</dimen>
+    <dimen name="fragment_informacion_camara_w">15dp</dimen>
+    <dimen name="check_box_font_size">16dp</dimen>
+    <dimen name="item_tarjeta_h">12dp</dimen>
+    <dimen name="fragment_suscripcion_mensual_title_mb">15dp</dimen>
+    <dimen name="item_suscripcion_mensual_h">25dp</dimen>
+    <dimen name="item_suscripcion_mensual_w">130dp</dimen>
+    <dimen name="item_suscripcion_mensual_ts">12dp</dimen>
+    <dimen name="subscripcion_detalle_btn_cancelar_w">175dp</dimen>
+    <dimen name="suscripcion_detalle_pl">40dp</dimen>
+    <dimen name="suscripcion_detalle_padding">20dp</dimen>
+    <dimen name="suscripcion_detalle_mt">40dp</dimen>
+    <dimen name="invisible_space_login">30dp</dimen>
+    <dimen name="fragment_informacion_mr_cambiarfoto">20dp</dimen>
+
+</resources>

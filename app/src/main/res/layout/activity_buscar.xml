@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Buscar">
+
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/buscar_content_w"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/buscar_titulo"
+                android:text="BUSCAR"
+                android:fontFamily="@font/ralewaybold"
+                android:textSize="24sp"
+                android:layout_marginBottom="31dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/spinner"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/buscar_edittext_ml"
+                android:layout_marginRight="@dimen/buscar_edittext_mr"
+                android:paddingRight="5dp"
+                android:background="@drawable/bordered_rect"
+                android:layout_below="@id/buscar_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+
+
+                <EditText
+                    android:id="@+id/edit_query"
+                    android:theme="@style/BlackTheme"
+                    android:hint="Busca un club o ciudad"
+                    android:background="@android:color/white"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buscar_boton"
+                android:background="@drawable/circle_button"
+                android:fontFamily="@font/ralewaymedium"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:text="BUSCAR"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/spinner"
+                android:layout_width="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="30dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:visibility="gone"
+                android:overScrollMode="never"
+                android:id="@+id/rv_sucursales"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

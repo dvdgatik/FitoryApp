@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="aqua">#37BDC2</color>
+    <color name="gris">#F1F1F2</color>
+    <color name="grisCalendar">#BCBEC0</color>
+    <color name="grisB">#78797b</color>
+    <color name="grisSusc">#58595B</color>
+    <color name="verde">#09B795</color>
+
+    <!--<color name="grisSusc">@color/caldroid_lighter_gray</color>-->
+    <color name="rojo">#BB1930</color>
+    <color name="rojoClose">#bd1e2d</color>
+    <color name="azul">#1866f6</color>
+
+    <!--Theme Colors-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

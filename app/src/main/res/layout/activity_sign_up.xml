@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:overScrollMode="never"
+    android:background="@color/aqua"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.SignUp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:onClick="atras"
+            android:src="@drawable/flecha_regresar"
+            android:layout_marginTop="@dimen/login_flecha_mt"
+            android:layout_width="@dimen/login_flecha_ancho"
+            android:layout_height="@dimen/login_flecha_alto"
+            android:padding="@dimen/fab_margin"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/login_width"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/logo_fitory_bco"
+            android:layout_width="@dimen/sign_up_logo_w"
+            android:layout_height="@dimen/sign_up_logo_h"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/login_logo_mt"
+            android:layout_marginBottom="@dimen/sign_up_logo_mb"
+             />
+
+        <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+        <LinearLayout
+            android:layout_marginTop="@dimen/invisible_et_mt"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <ImageView
+                android:src="@drawable/icono_nombre"
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="16dp" />
+
+        <EditText
+            android:id="@+id/et_nombre"
+            android:background="@drawable/edittext_border"
+            android:inputType="text"
+            android:hint="Nombre (s)"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/sign_up_edit_text_mt"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <ImageView
+                android:src="@drawable/icono_nombre"
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="16dp" />
+
+            <EditText
+                android:id="@+id/et_apellido"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:hint="Apellidos"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="@dimen/sign_up_checkbox_w"
+            android:layout_height="@dimen/sign_up_checkbox_h"
+
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/ch_hombre"
+                android:checked="true"
+                android:fontFamily="@font/ralewaymedium"
+                android:textColor="@android:color/white"
+                android:layout_width="0dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:textSize="@dimen/check_box_font_size"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hombre" />
+
+            <CheckBox
+                android:id="@+id/ch_mujer"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/ralewaymedium"
+                android:layout_width="0dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:textSize="@dimen/check_box_font_size"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mujer" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <ImageView
+                android:src="@drawable/icono_correo"
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="16dp" />
+
+            <EditText
+                android:id="@+id/et_correoelectronico"
+                android:background="@drawable/edittext_border"
+                android:inputType="textEmailAddress"
+                android:hint="Correo electrónico"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/sign_up_edit_text_mt"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <ImageView
+                android:src="@drawable/icono_contrasena"
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="16dp" />
+
+            <EditText
+                android:id="@+id/et_contrasena"
+                android:background="@drawable/edittext_border"
+                android:inputType="textPassword"
+                android:hint="Contraseña"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/sign_up_edit_text_mt"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <ImageView
+                android:src="@drawable/ic_phone"
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="16dp" />
+
+            <EditText
+                android:id="@+id/et_celular"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:hint="Teléfono celular"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                />
+
+        </RelativeLayout>
+
+        <Button
+            android:onClick="registrarCliente"
+            android:layout_width="@dimen/sign_up_btn_w"
+            android:layout_height="@dimen/buttons_height"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/ralewaymedium"
+            android:layout_marginTop="@dimen/sign_up_btn_mt"
+            android:background="@drawable/circle_button"
+            android:text="@string/registrarme"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/ralewaymedium"
+            android:layout_marginTop="@dimen/sign_up_terminos_mt"
+            android:text="@string/terminos_pt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:onClick="terminos"
+            android:letterSpacing="0.1"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="@string/terminos_pt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

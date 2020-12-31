@@ -1,0 +1,173 @@
+<RelativeLayout
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/club"
+    android:paddingTop="@dimen/item_club_pd"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_club_h"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_above="@+id/section"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></View>
+
+
+
+    <ImageView
+        android:visibility="gone"
+    android:layout_marginRight="5dp"
+    android:id="@+id/iv_icono_compartir"
+    android:layout_alignParentEnd="true"
+    android:layout_above="@+id/club_nombre"
+    android:src="@drawable/icono_compartir_inactivo"
+    android:layout_width="30dp"
+    android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/tv_favorito_id"
+        android:text="0"
+        android:visibility="invisible"
+        android:layout_above="@+id/tv_favorito_value"
+        android:layout_toLeftOf="@+id/iv_icono_compartir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_favorito_value"
+        android:text="false"
+        android:visibility="invisible"
+        android:layout_above="@+id/iv_icono_favoritos"
+        android:layout_toLeftOf="@+id/iv_icono_compartir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_icono_favoritos"-->
+    <!--android:layout_above="@+id/club_nombre"-->
+        <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_toLeftOf="@+id/iv_icono_compartir"-->
+    <!--android:src="@drawable/icono_favoritos_inactivo"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp" />-->
+
+
+    <LinearLayout
+    android:layout_marginTop="5dp"
+    android:layout_above="@+id/club_direccion"
+    android:id="@+id/club_nombre"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+    android:id="@+id/tv_nombre_club"
+    android:fontFamily="@font/ralewaybold"
+    android:text=""
+    android:textSize="@dimen/item_club_title"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="2"/>
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1">-->
+        <!--<RatingBar-->
+            <!--android:id="@+id/rb_calificacion"-->
+        <!--android:layout_gravity="right"-->
+        <!--style="?android:ratingBarStyleSmall"-->
+        <!--android:theme="@style/RatingStar"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/rb_club_calificacion"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_toRightOf="@+id/rb_calificacion"
+                android:src="@drawable/star_off"
+                android:layout_width="@dimen/club_stars_w"
+                android:layout_height="@dimen/club_stars_w" />
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_toRightOf="@+id/rb_calificacion"
+                android:src="@drawable/star_off"
+                android:layout_width="@dimen/club_stars_w"
+                android:layout_height="@dimen/club_stars_w" />
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_toRightOf="@+id/rb_calificacion"
+                android:src="@drawable/star_off"
+                android:layout_width="@dimen/club_stars_w"
+                android:layout_height="@dimen/club_stars_w" />
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_toRightOf="@+id/rb_calificacion"
+                android:src="@drawable/star_off"
+                android:layout_width="@dimen/club_stars_w"
+                android:layout_height="@dimen/club_stars_w" />
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_toRightOf="@+id/rb_calificacion"
+                android:src="@drawable/star_off"
+                android:layout_width="@dimen/club_stars_w"
+                android:layout_height="@dimen/club_stars_w" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_above="@+id/section"
+    android:id="@+id/club_direccion"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_sucursal_direccion"
+        android:fontFamily="@font/ralewaymedium"
+        android:textSize="@dimen/item_club_subtitle_ts"
+        android:layout_marginTop="@dimen/item_club_direccion_mt"
+        android:text=""
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"/>
+    <!--<TextView-->
+    <!--android:id="@+id/tv_sucursal_distancia"-->
+    <!--android:gravity="right|center_vertical"-->
+    <!--android:fontFamily="@font/ralewaymedium"-->
+    <!--android:text="1.5KM"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"/>-->
+
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/section"
+        android:layout_marginTop="@dimen/item_club_section_mt"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+</RelativeLayout>
+

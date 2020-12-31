@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/ciudad"
+        android:text="Monterrey"
+        android:fontFamily="@font/ralewaymedium"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:background="@drawable/circle_button_border_aqua"
+        android:layout_width="@dimen/item_ciudad_aqua"
+        android:layout_height="30dp" />
+
+</RelativeLayout>

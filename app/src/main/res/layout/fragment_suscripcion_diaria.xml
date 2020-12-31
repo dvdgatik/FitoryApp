@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SuscripcionDiaria">
+
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/app_toolbar_h"
+            android:layout_width="@dimen/suscripcion_diaria_w"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/suscripcion_titulo"
+                android:text="SUSCRIPCIÓN"
+                android:textSize="22sp"
+                android:fontFamily="@font/ralewaybold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/plan_mensual"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/suscripcion_titulo"
+                android:text="PLAN DIARIO"
+                android:textSize="@dimen/font_size"
+                android:fontFamily="@font/ralewaysemibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/plan_mensual_texto"
+                android:textSize="@dimen/font_size"
+                android:layout_centerHorizontal="true"
+                android:text="@string/suscripcion_diaria"
+                android:textColor="@color/grisSusc"
+                android:layout_below="@+id/plan_mensual"
+                android:layout_marginBottom="@dimen/fragment_subscripciones_descripcion_mb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/precio"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_below="@id/line1"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<TextView-->
+                    <!--android:text="PRECIO DIA:"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:fontFamily="@font/ralewaysemibold"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_club_precio_dia"-->
+                    <!--android:text="$70.00 MXN"-->
+                    <!--android:fontFamily="@font/ralewaymedium"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+            <!--</LinearLayout>-->
+
+            <View
+                android:id="@+id/line1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/black"
+                android:layout_below="@id/plan_mensual_texto"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+
+
+            <LinearLayout
+                android:id="@+id/layout_metodos_pago"
+                android:layout_below="@+id/line1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:theme="@style/AquaTheme">
+                    <RadioGroup
+                        android:id="@+id/rg_sesiones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <RadioButton
+                            android:id="@+id/rb_paquete1"
+                            android:scaleX="0.65"
+                            android:scaleY="0.65"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <RadioButton
+                            android:id="@+id/rb_paquete2"
+                            android:scaleX="0.65"
+                            android:scaleY="0.65"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <RadioButton
+                            android:id="@+id/rb_paquete3"
+                            android:scaleX="0.65"
+                            android:scaleY="0.65"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <RadioButton
+                            android:id="@+id/rb_paquete4"
+                            android:visibility="gone"
+                            android:scaleX="0.65"
+                            android:scaleY="0.65"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <LinearLayout
+                        android:id="@+id/radio_button_1_1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:text="BÁSICO :"
+                            android:fontFamily="@font/ralewaybold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:fontFamily="@font/ralewaybold"
+                            android:text="4 sesiones"
+                            android:textSize="9sp"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/radio_button_2_1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:text="MEDIO :"
+                            android:fontFamily="@font/ralewaybold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:fontFamily="@font/ralewaybold"
+                            android:text="8 sesiones"
+                            android:textSize="9sp"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/radio_button_3_1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:text="AVANZADO :"
+                            android:fontFamily="@font/ralewaybold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:fontFamily="@font/ralewaybold"
+                            android:text="12 sesiones"
+                            android:textSize="9sp"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/radio_button_4_1"
+                        android:visibility="gone"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:text="GRATUITO :"
+                            android:fontFamily="@font/ralewaybold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <!--<TextView-->
+                            <!--android:fontFamily="@font/ralewaybold"-->
+                            <!--android:text="..."-->
+                            <!--android:textSize="9sp"-->
+                            <!--android:textColor="#58595b"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content" />-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <LinearLayout
+                        android:id="@+id/radio_button_1_2"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv_paquete1_precio"
+                            android:text="$132,99 MXN"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="Aprox. 1 sesión por semana"
+                            android:textSize="9sp"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <!--<TextView-->
+                            <!--android:text="Vigencia: 31/12/2018"-->
+                            <!--android:textSize="9sp"-->
+                            <!--android:textColor="#58595b"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/radio_button_2_2"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv_paquete2_precio"
+                            android:text="$264.00 MXN"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="Aprox. 2 sesiones por semana"
+                            android:textSize="9sp"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <!--<TextView-->
+                            <!--android:text="Vigencia: 31/12/2018"-->
+                            <!--android:textSize="9sp"-->
+                            <!--android:textColor="#58595b"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/radio_button_3_2"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv_paquete3_precio"
+                            android:text="$369.00 MXN"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="Aprox. 3 sesiones por semana"
+                            android:textSize="9sp"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <!--<TextView-->
+                            <!--android:text="Vigencia: 31/12/2018"-->
+                            <!--android:textSize="9sp"-->
+                            <!--android:textColor="#58595b"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/radio_button_4_2"
+                        android:visibility="gone"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv_paquete4_precio"
+                            android:text="$0.00 MXN"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_dias_prueba"
+                            android:text=" días de prueba. Vigencia 1 mes"
+                            android:textSize="9sp"
+                            android:textColor="#58595b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/line2"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/black"
+                android:layout_below="@id/layout_metodos_pago"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+
+
+
+            <TextView
+                android:id="@+id/seleccionar_tarjeta"
+                android:layout_below="@+id/line2"
+                android:layout_marginTop="40dp"
+                android:textSize="12sp"
+                android:text="Seleccionar tarjeta"
+                android:fontFamily="@font/ralewaysemibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/tarjeta_spinner"
+                android:layout_below="@+id/seleccionar_tarjeta"
+                android:background="@drawable/edittext_border_gray"
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+
+                <Spinner
+                    android:id="@+id/spinner_tarjetas"
+                    android:backgroundTint="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></Spinner>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/pagar_button"
+                android:background="@drawable/circle_button"
+                android:fontFamily="@font/ralewaymedium"
+                android:textSize="@dimen/font_size"
+                android:textColor="@android:color/white"
+                android:text="PAGAR"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tarjeta_spinner"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/buttons_height" />
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/layout_codigo"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_marginTop="24dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:layout_below="@+id/pagar_button"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<EditText-->
+                    <!--android:id="@+id/et_codigo_celular"-->
+                    <!--android:hint="Código"-->
+                    <!--android:fontFamily="@font/ralewaymedium"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content" />-->
+                <!--<LinearLayout-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<Button-->
+                        <!--android:id="@+id/activar_button"-->
+                        <!--android:background="@drawable/circle_button"-->
+                        <!--android:fontFamily="@font/ralewaymedium"-->
+                        <!--android:textSize="@dimen/font_size"-->
+                        <!--android:textColor="@android:color/white"-->
+                        <!--android:text="ACTIVAR"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/buttons_height" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_below="@+id/pagar_button"-->
+                <!--android:id="@+id/pago_automatico"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<Switch-->
+                    <!--android:layout_weight="6"-->
+                    <!--android:theme="@style/AquaTheme"-->
+                    <!--android:scaleX="1.25"-->
+                    <!--android:scaleY="1.25"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_weight="8"-->
+                    <!--android:layout_toRightOf="@id/pago_automatico"-->
+                    <!--android:text="Pago automático"-->
+                    <!--android:fontFamily="@font/ralewaymedium"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_below="@+id/pagar_button"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</LinearLayout>-->
+
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/agregar_tarjeta_title"-->
+                <!--android:text="AGREGAR TARJETA"-->
+                <!--android:textSize="12sp"-->
+                <!--android:fontFamily="@font/ralewaysemibold"-->
+                <!--android:layout_marginTop="90dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_below="@+id/pagar_button"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/agregar_tarjeta_componentes"-->
+                <!--android:layout_below="@id/agregar_tarjeta_title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--&lt;!&ndash; Dummy item to prevent AutoCompleteTextView from receiving focus &ndash;&gt;-->
+                <!--<LinearLayout-->
+                    <!--android:focusable="true"-->
+                    <!--android:focusableInTouchMode="true"-->
+                    <!--android:layout_width="0px"-->
+                    <!--android:layout_height="0px"/>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/numero_tarjeta"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:background="@drawable/edittext_border_gray"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="20dp">-->
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_numero_tarjeta"-->
+                        <!--android:theme="@style/BlackTheme"-->
+                        <!--android:background="@android:color/transparent"-->
+                        <!--android:paddingLeft="20dp"-->
+                        <!--android:hint="Número de Tarjeta"-->
+                        <!--android:textSize="@dimen/font_size"-->
+                        <!--android:maxLength="16"-->
+                        <!--android:inputType="number"-->
+                        <!--android:fontFamily="@font/ralewaymedium"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent" />-->
+
+                <!--</RelativeLayout>-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/vencimiento"-->
+                    <!--android:layout_below="@id/numero_tarjeta"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/vencimiento_month"-->
+                        <!--android:layout_below="@+id/numero_tarjeta"-->
+                        <!--android:paddingLeft="20dp"-->
+                        <!--android:background="@drawable/edittext_border_gray"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_weight="1">-->
+                        <!--<EditText-->
+                            <!--android:id="@+id/et_tarjeta_mes"-->
+                            <!--android:theme="@style/BlackTheme"-->
+                            <!--android:hint="Vencimiento (MM)"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:fontFamily="@font/ralewaymedium"-->
+                            <!--android:textSize="@dimen/font_size"-->
+                            <!--android:maxLength="2"-->
+                            <!--android:inputType="number"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--/>-->
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/vencimiento_year"-->
+                        <!--android:layout_below="@id/numero_tarjeta"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:background="@drawable/edittext_border_gray"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_weight="1">-->
+                        <!--<EditText-->
+                            <!--android:id="@+id/et_tarjeta_vencimiento"-->
+                            <!--android:theme="@style/BlackTheme"-->
+                            <!--android:hint="Vencimiento (AAAA)"-->
+                            <!--android:paddingLeft="20dp"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:fontFamily="@font/ralewaymedium"-->
+                            <!--android:textSize="@dimen/font_size"-->
+                            <!--android:maxLength="4"-->
+                            <!--android:inputType="number"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--/>-->
+                    <!--</RelativeLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_below="@id/vencimiento"-->
+                    <!--android:background="@drawable/edittext_border_gray"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--&gt;-->
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_tarjeta_cvv"-->
+                        <!--android:hint="Código de Seguridad"-->
+                        <!--android:paddingLeft="20dp"-->
+                        <!--android:maxLength="4"-->
+                        <!--android:theme="@style/BlackTheme"-->
+                        <!--android:background="@android:color/transparent"-->
+                        <!--android:fontFamily="@font/ralewaymedium"-->
+                        <!--android:textSize="@dimen/font_size"-->
+                        <!--android:inputType="number"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent" />-->
+                <!--</RelativeLayout>-->
+
+
+            <!--</RelativeLayout>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_agregar_tarjeta"-->
+                <!--android:background="@drawable/circle_button"-->
+                <!--android:fontFamily="@font/ralewaymedium"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:text="AGREGAR"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_below="@+id/agregar_tarjeta_componentes"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="30dp" />-->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

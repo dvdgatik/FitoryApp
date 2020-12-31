@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SuscripcionMensual">
+
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+    </View>
+
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/app_toolbar_h"
+            android:layout_width="@dimen/suscripcion_mensual_w"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/suscripcion_titulo"
+                android:text="SUSCRIPCIÓN"
+                android:textSize="22sp"
+                android:fontFamily="@font/ralewaybold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/plan_mensual"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/suscripcion_titulo"
+                android:text="PLAN MENSUAL"
+                android:textSize="@dimen/font_size"
+                android:fontFamily="@font/ralewaysemibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/plan_mensual_texto"
+                android:textSize="@dimen/font_size"
+                android:layout_centerHorizontal="true"
+                android:text="@string/suscripcion_mensual"
+                android:textColor="@color/grisSusc"
+                android:layout_below="@+id/plan_mensual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/black"
+                android:layout_below="@id/plan_mensual_texto"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+
+            <LinearLayout
+                android:id="@+id/precio"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/line1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="PRECIO MES:"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/ralewaysemibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_club_precio_mes"
+                    android:text="$509.00 MXN"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/black"
+                android:layout_below="@id/precio"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/seleccionar_tarjeta"
+                android:layout_below="@+id/line2"
+                android:layout_marginTop="40dp"
+                android:textSize="12sp"
+                android:text="Seleccionar tarjeta"
+                android:fontFamily="@font/ralewaysemibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/tarjeta_spinner"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/seleccionar_tarjeta"
+                android:background="@drawable/edittext_border_gray"
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+
+                <Spinner
+                    android:id="@+id/spinner_tarjetas"
+                    android:backgroundTint="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></Spinner>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/pagar_button"
+                android:background="@drawable/circle_button"
+                android:fontFamily="@font/ralewaymedium"
+                android:textSize="@dimen/font_size"
+                android:textColor="@android:color/white"
+                android:text="PAGAR"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tarjeta_spinner"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/buttons_height" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="@dimen/item_tarjeta_mt"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_brand"
+        android:text="VISA"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:textSize="@dimen/item_club_subtitle_ts"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_last4"
+        android:text="* * * *    * * * *    * * * *  "
+        android:textAlignment="center"
+        android:textSize="@dimen/item_club_subtitle_ts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"/>
+
+    <ImageView
+        android:id="@+id/tv_eliminar_tarjeta"
+        android:src="@drawable/ic_close_red"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/item_tarjeta_h"
+        android:layout_weight="1"/>
+
+</LinearLayout>

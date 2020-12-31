@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SeleccionCiudad">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_toolbar_h">
+
+        <ImageView
+            android:onClick="atras"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/toolbar_boton_regresar" />
+
+        <ImageView
+            android:src="@drawable/logo_fitory_bco"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/toolbar_logo_w"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gris"
+        android:layout_width="@dimen/app_gray_ml_w"
+        android:layout_height="match_parent">
+    </View>
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_toRightOf="@+id/marginLeft"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_marginLeft="@dimen/ciudad_titulo_ml"
+                android:layout_marginTop="@dimen/ciudad_titulo_mt"
+                android:textSize="24sp"
+                android:fontFamily="@font/ralewaybold"
+                android:text="@string/cual_es_tu_ciudad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="12sp"
+                android:fontFamily="@font/ralewaymedium"
+                android:layout_marginLeft="@dimen/ciudad_subtitulo_ml"
+                android:text="@string/selecciona_ciudad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/ciudad_pais_mt"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="@dimen/ciudad_pais_w"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="@font/ralewaysemibold"
+                    android:text="Estado"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_border_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <Spinner
+                        android:spinnerMode="dropdown"
+                        android:id="@+id/spinner_estados"
+                        android:backgroundTint="@android:color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"></Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_ciudad"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+            <!--<LinearLayout-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+            <!--<Button-->
+                <!--android:onClick="clubDetalle"-->
+                <!--android:layout_marginTop="50dp"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_marginLeft="@dimen/ciudad_recycler_ml"-->
+                <!--android:text="Monterrey"-->
+                <!--android:textColor="@drawable/custom_button_text"-->
+                <!--android:textSize="12sp"-->
+                <!--android:fontFamily="@font/ralewaymedium"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:background="@drawable/custom_button"-->
+                <!--android:layout_width="120dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_weight="1"/>-->
+
+                <!--<Button-->
+                    <!--android:onClick="clubDetalle"-->
+                    <!--android:layout_marginTop="50dp"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:layout_marginLeft="@dimen/ciudad_recycler_ml"-->
+                    <!--android:layout_marginRight="@dimen/ciudad_recycler_mr"-->
+                    <!--android:text="Guadalajara"-->
+                    <!--android:textColor="@drawable/custom_button_text"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:fontFamily="@font/ralewaymedium"-->
+                    <!--android:textAllCaps="false"-->
+                    <!--android:background="@drawable/custom_button"-->
+                    <!--android:layout_width="120dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_weight="1"/>-->
+
+                <!--<Button-->
+                    <!--android:onClick="clubDetalle"-->
+                    <!--android:layout_marginTop="50dp"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:layout_marginRight="@dimen/ciudad_recycler_mr"-->
+                    <!--android:text="Saltillo"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:textColor="@drawable/custom_button_text"-->
+                    <!--android:fontFamily="@font/ralewaymedium"-->
+                    <!--android:textAllCaps="false"-->
+                    <!--android:background="@drawable/custom_button"-->
+                    <!--android:layout_width="120dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_weight="1"/>-->
+
+            <!--</LinearLayout>-->
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:background="@color/gris"-->
+                <!--android:layout_marginTop="@dimen/ciudad_recycler_mt"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginLeft="@dimen/ciudad_recycler_ml"-->
+                <!--android:layout_marginRight="@dimen/ciudad_recycler_mr"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+
+            <Button
+                android:visibility="gone"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="@dimen/ciudad_boton_mb"
+                android:fontFamily="@font/ralewaymedium"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/solicitar_cambio"
+                android:textColor="@android:color/white"
+                android:background="@drawable/circle_button"
+                android:layout_width="@dimen/ciudad_boton_w"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

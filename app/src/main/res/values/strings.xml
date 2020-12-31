@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Fitory</string>
+    <string name="no_has_creado_una_cuenta">¿No has creado una cuenta?</string>
+    <string name="registrate_aqui"><u>Regístrate aquí</u></string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="terminos_pt1">Al ingresar a la aplicación aceptas los</string>
+    <string name="terminos_pt2"><u>Términos y Condiciones y Aviso de Privacidad</u></string>
+    <string name="solicitar_cambio">SOLICITAR CAMBIO</string>
+    <string name="cual_es_tu_ciudad">¿CUÁL ES TU CIUDAD?</string>
+    <string name="selecciona_ciudad">Selecciona la ciudad donde vives actualmente.</string>
+    <string name="pais">País</string>
+    <string name="title_activity_intro">Intro</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="iniciar_sesion">INICIAR SESIÓN</string>
+    <string name="registrarme">REGISTRARME</string>
+
+    <string name="title_activity_seleccion_registrar">SeleccionRegistrar</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="salud">SALUD</string>
+    <string name="convivir">CONVIVIR</string>
+    <string name="verme_bien">VERME BIEN</string>
+    <string name="diversiOn">DIVERSIÓN</string>
+    <string name="como_llegar"><u>¿Cómo llegar?</u></string>
+    <string name="title_activity_perfil">Perfil</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="tab_text_4">TAB 4</string>
+
+    <string name="material_calendar_monday">LUN</string>
+    <string name="material_calendar_tuesday">MAR</string>
+    <string name="material_calendar_wednesday">MIE</string>
+    <string name="material_calendar_thursday">JUE</string>
+    <string name="material_calendar_friday">VIE</string>
+    <string name="material_calendar_saturday">SAB</string>
+    <string name="material_calendar_sunday">DOM</string>
+    <string name="calendario">En éste calendario puedes verificar tu registro de asistencia. Así podrás estar al tanto de los días asistidos durante el mes que selecciones. </string>
+    <string name="suscripcion_mensual">Ideal para personas de alto rendimiento. Accede de forma ilimitada a los servicios del Club durante un Mes Completo. Para facilitar tu pago el servicio se renovará automáticamente. Puedes cancelar el cobro recurrente en cualquier momento.</string>
+    <string name="suscripcion_diaria">Ponte una meta alcanzable y reserva las sesiones para este mes. Para facilitar la medición de tus resultados, el servicio se contratará por mes calendario, tómalo en cuenta al realizar tu reservación. \n \n Vigencia: Último día del mes.</string>
+    <string name="suscripcion_dias_pruebas">Los Clubes afiliados a Fitory están comprometidos a ayudarte a encontrar tu actividad ideal. Para lograrlo te regalan sesiones de prueba para que visites sus instalaciones.</string>
+    <string name="administrador">Ocurrió un error. Comuníquese con el administrador</string>
+    <string name="intentar_nuevamente">Error. Vuelva a intentarlo de nuevo</string>
+    <string name="no_internet">No cuenta con una conexión a Internet.</string>
+
+    <array name="material_calendar_months_array">
+        <item>ENERO</item>
+        <item>FEBRERO</item>
+        <item>MARZO</item>
+        <item>ABRIL</item>
+        <item>MAYO</item>
+        <item>JUNIO</item>
+        <item>JULIO</item>
+        <item>AGOSTO</item>
+        <item>SEPTIEMBRE</item>
+        <item>OCTUBRE</item>
+        <item>NOVIEMBRE</item>
+        <item>DICIEMBRE</item>
+    </array>
+
+    //Facebook ID
+    <!--<string name="facebook_app_id">297982744139671</string>-->
+    <string name="facebook_app_id">2232574700399840</string>
+    <string name="fb_login_protocol_scheme">fb2232574700399840</string>
+
+    //Google ID
+    <string name="server_client_id">YOUR_SERVER_CLIENT_ID</string>
+
+    //Google Maps API Key
+    <string name="title_activity_maps">Map</string>
+    <string name="timeout">Ocurrió un error. Intente nuevamente.</string>
+    <string name="title_activity_beacon_encontrado">BeaconEncontrado</string>
+    <string name="title_activity_evaluar">Evaluar</string>
+    <string name="title_activity_main3">Main3Activity</string>
+</resources>

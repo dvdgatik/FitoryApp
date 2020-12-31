@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/cornered_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="@drawable/cornered_bg"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <ImageView
+            android:id="@+id/permission_cerrar"
+            android:src="@drawable/ic_close"
+            android:layout_margin="6dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"
+            android:fontFamily="@font/ralewaybold"
+            android:layout_centerHorizontal="true"
+            android:text="Solicitud de Permiso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textAlignment="center"
+            android:text="Para mejorar tu experiencia Fitory requiere que actives tu Bluetooth. "
+            android:layout_centerInParent="true"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <Button
+                android:id="@+id/permission_cancelar"
+                android:textSize="14dp"
+                android:background="@drawable/custom_button_dialog"
+                android:text="Cancelar"
+                android:textColor="@color/azul"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/permission_activar"
+                android:textSize="14dp"
+                android:background="@drawable/custom_button_dialog"
+                android:text="Activar"
+                android:textColor="@color/azul"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
